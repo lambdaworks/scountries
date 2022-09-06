@@ -34,6 +34,6 @@ lazy val root = (project in file("."))
       enumeratum
     ),
     scalacOptions ++= Seq(
-      "-Ywarn-unused
+      "-Ywarn-unused"
     )
   )
