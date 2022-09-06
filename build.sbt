@@ -30,7 +30,7 @@ lazy val root = (project in file("."))
   .settings(
     name               := "scountries",
     crossScalaVersions := Seq("2.12.16", "2.13.8"),
-    libraryDependencies ++= Seq(
+    libraryDependencies ++= List(
       enumeratum
     ),
     scalacOptions ++= Seq(
