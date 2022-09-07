@@ -13,7 +13,7 @@ inThisBuild(
     semanticdbEnabled          := true,
     semanticdbVersion          := scalafixSemanticdb.revision,
     scalafixScalaBinaryVersion := CrossVersion.binaryScalaVersion(scalaVersion.value),
-    scalafixDependencies ++= Seq(
+    scalafixDependencies ++= List(
       organizeImports
     )
   )
@@ -29,11 +29,11 @@ addCommandAlias("fmtCheck", "all scalafmtSbtCheck scalafmtCheckAll")
 lazy val root = (project in file("."))
   .settings(
     name               := "scountries",
-    crossScalaVersions := Seq("2.12.16", "2.13.8"),
+    crossScalaVersions := List("2.12.16", "2.13.8"),
     libraryDependencies ++= List(
       enumeratum
     ),
-    scalacOptions ++= Seq(
+    scalacOptions ++= List(
       "-Ywarn-unused"
     )
   )
