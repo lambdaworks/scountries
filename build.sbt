@@ -31,7 +31,8 @@ lazy val root = (project in file("."))
     name               := "scountries",
     crossScalaVersions := List("2.12.16", "2.13.8"),
     libraryDependencies ++= List(
-      enumeratum
+      enumeratum,
+      scalaTest
     ),
     scalacOptions ++= List(
       "-Ywarn-unused"
