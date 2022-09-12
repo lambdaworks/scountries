@@ -10,6 +10,6 @@ object Dependencies {
 
   val enumeratum: ModuleID      = "com.beachape"         %% "enumeratum"       % Versions.Enumeratum
   val organizeImports: ModuleID = "com.github.liancheng" %% "organize-imports" % Versions.OrganizeImports
-  val scalaTest: ModuleID       = "org.scalatest"        %% "scalatest"        % Versions.ScalaTest % "test"
+  val scalaTest: ModuleID       = "org.scalatest"        %% "scalatest"        % Versions.ScalaTest % Test
 
 }

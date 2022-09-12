@@ -2,13 +2,37 @@ package io.lambdaworks.scountries
 
 private[scountries] trait Api {
 
+  /**
+   * Optionally returns a [[Country]] with the given name, disregarding case
+   *
+   * @param name
+   *   the name of the country
+   * @return
+   *   an option value containing the country with the specified name
+   */
   def getByCountryName(name: String): Option[Country] =
-    Country.values.find(_.name == name)
+    Country.values.find(_.name.equalsIgnoreCase(name))
 
+  /**
+   * Optionally returns a [[Country]] with the given ISO 3166-1 alpha-2 code, disregarding case
+   *
+   * @param name
+   *   the ISO 3166-1 alpha-2 code of the country
+   * @return
+   *   an option value containing the country with the specified ISO 3166-1 alpha-2 code
+   */
   def getByAlpha2(alpha2: String): Option[Country] =
-    Country.withNameOption(alpha2)
+    Country.withNameInsensitiveOption(alpha2)
 
+  /**
+   * Optionally returns a [[Country]] with the given ISO 3166-1 alpha-3 code, disregarding case
+   *
+   * @param name
+   *   the ISO 3166-1 alpha-3 code of the country
+   * @return
+   *   an option value containing the country with the specified ISO 3166-1 alpha-3 code
+   */
   def getByAlpha3(alpha3: String): Option[Country] =
-    Country.values.find(_.alpha3 == alpha3)
+    Country.values.find(_.alpha3.equalsIgnoreCase(alpha3))
 
 }
