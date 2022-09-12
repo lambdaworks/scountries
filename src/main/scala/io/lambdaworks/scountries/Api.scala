@@ -16,7 +16,7 @@ private[scountries] trait Api {
   /**
    * Optionally returns a [[Country]] with the given ISO 3166-1 alpha-2 code, disregarding case
    *
-   * @param name
+   * @param alpha2
    *   the ISO 3166-1 alpha-2 code of the country
    * @return
    *   an option value containing the country with the specified ISO 3166-1 alpha-2 code
@@ -27,7 +27,7 @@ private[scountries] trait Api {
   /**
    * Optionally returns a [[Country]] with the given ISO 3166-1 alpha-3 code, disregarding case
    *
-   * @param name
+   * @param alpha3
    *   the ISO 3166-1 alpha-3 code of the country
    * @return
    *   an option value containing the country with the specified ISO 3166-1 alpha-3 code
