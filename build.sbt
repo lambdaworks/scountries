@@ -15,6 +15,14 @@ inThisBuild(
     scalafixScalaBinaryVersion := CrossVersion.binaryScalaVersion(scalaVersion.value),
     scalafixDependencies ++= List(
       organizeImports
+    ),
+    developers := List(
+      Developer(
+        "mvelimir",
+        "Velimir Milinković",
+        "velimir@lambdaworks.io",
+        url("https://github.com/mvelimir")
+      )
     )
   )
 )
