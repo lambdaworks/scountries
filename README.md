@@ -8,6 +8,12 @@
 
 Scala library that provides an enumeration of [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166) codes for countries, along with their subdivisions.
 
+To use this library, add the following to your `build.sbt` file:
+
+```scala
+libraryDependencies += "io.lambdaworks" %% "scountries" % "0.1.0"
+```
+
 [scala-version-badge]: https://img.shields.io/badge/scala-2.13.8-blue?logo=scala&color=red
 [ci-badge]: https://github.com/lambdaworks/scountries/actions/workflows/ci.yml/badge.svg
 [ci-link]: https://github.com/lambdaworks/scountriesr/actions/workflows/ci.yml
