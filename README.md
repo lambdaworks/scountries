@@ -11,10 +11,10 @@ Scala library that provides an enumeration of [ISO 3166](https://en.wikipedia.or
 To use this library, add the following to your `build.sbt` file:
 
 ```scala
-libraryDependencies += "io.lambdaworks" %% "scountries" % "version"
+libraryDependencies += "io.lambdaworks" %% "scountries" % "x.y.z"
 ```
 
-Where `version` refers to the release version in the badge above.
+Where `x.y.z` refers to the release version in the badge above.
 
 [scala-version-badge]: https://img.shields.io/badge/scala-2.13.8-blue?logo=scala&color=red
 [ci-badge]: https://github.com/lambdaworks/scountries/actions/workflows/ci.yml/badge.svg
