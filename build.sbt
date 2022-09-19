@@ -40,7 +40,7 @@ sonatypeRepository     := "https://s01.oss.sonatype.org/service/local"
 lazy val root = (project in file("."))
   .settings(
     name               := "scountries",
-    crossScalaVersions := List("2.12.16", "2.13.8"),
+    crossScalaVersions := List("2.12.17", "2.13.8"),
     libraryDependencies ++= List(
       enumeratum,
       scalaTest
