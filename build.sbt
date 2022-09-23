@@ -18,10 +18,10 @@ inThisBuild(
     ),
     developers := List(
       Developer(
-        "mvelimir",
-        "Velimir Milinković",
-        "velimir@lambdaworks.io",
-        url("https://github.com/mvelimir")
+        "lambdaworks",
+        "LambdaWorks' Team",
+        "admin@lambdaworks.io",
+        url("https://github.com/lambdaworks")
       )
     )
   )
