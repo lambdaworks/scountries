@@ -4,7 +4,7 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 inThisBuild(
   List(
-    scalaVersion               := "2.13.8",
+    scalaVersion               := "2.13.10",
     homepage                   := Some(url("https://github.com/lambdaworks/scountries/")),
     licenses                   := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
     organization               := "io.lambdaworks",
@@ -40,7 +40,7 @@ sonatypeRepository     := "https://s01.oss.sonatype.org/service/local"
 lazy val root = (project in file("."))
   .settings(
     name               := "scountries",
-    crossScalaVersions := List("2.12.17", "2.13.8"),
+    crossScalaVersions := List("2.12.17", "2.13.10"),
     libraryDependencies ++= List(
       enumeratum,
       scalaTest
