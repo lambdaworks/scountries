@@ -16,7 +16,7 @@ libraryDependencies += "io.lambdaworks" %% "scountries" % "x.y.z"
 
 Where `x.y.z` refers to the release version in the badge above.
 
-[scala-version-badge]: https://img.shields.io/badge/scala-2.13.8-blue?logo=scala&color=red
+[scala-version-badge]: https://img.shields.io/badge/scala-2.13.10-blue?logo=scala&color=red
 [ci-badge]: https://github.com/lambdaworks/scountries/actions/workflows/ci.yml/badge.svg
 [ci-link]: https://github.com/lambdaworks/scountriesr/actions/workflows/ci.yml
 [license-badge]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
