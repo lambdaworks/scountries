@@ -9,6 +9,8 @@ inThisBuild(
     licenses                   := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
     organization               := "io.lambdaworks",
     organizationName           := "LambdaWorks",
+    organizationHomepage       := Some(url("https://www.lambdaworks.io/")),
+    description                := "Scala library that provides an enumeration of ISO 3166 codes for countries, along with their subdivisions.",
     startYear                  := Some(2022),
     semanticdbEnabled          := true,
     semanticdbVersion          := scalafixSemanticdb.revision,
