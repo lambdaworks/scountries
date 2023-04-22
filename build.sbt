@@ -2,9 +2,13 @@ import Dependencies._
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
+val Scala212: String = "2.12.17"
+val Scala213: String = "2.13.10"
+val Scala3: String   = "3.2.2"
+
 inThisBuild(
   List(
-    scalaVersion               := "2.13.10",
+    scalaVersion               := Scala213,
     homepage                   := Some(url("https://github.com/lambdaworks/scountries/")),
     licenses                   := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
     organization               := "io.lambdaworks",
@@ -12,7 +16,7 @@ inThisBuild(
     organizationHomepage       := Some(url("https://www.lambdaworks.io/")),
     description                := "Scala library that provides an enumeration of ISO 3166 codes for countries, along with their subdivisions.",
     startYear                  := Some(2022),
-    semanticdbEnabled          := true,
+    semanticdbEnabled          := scalaVersion.value != Scala3, // enable SemanticDB
     semanticdbVersion          := scalafixSemanticdb.revision,
     scalafixScalaBinaryVersion := CrossVersion.binaryScalaVersion(scalaVersion.value),
     scalafixDependencies ++= List(
@@ -42,7 +46,7 @@ sonatypeRepository     := "https://s01.oss.sonatype.org/service/local"
 lazy val root = (project in file("."))
   .settings(
     name               := "scountries",
-    crossScalaVersions := List("2.12.17", "2.13.10"),
+    crossScalaVersions := List(Scala212, Scala213, Scala3),
     libraryDependencies ++= List(
       enumeratum,
       scalaTest
