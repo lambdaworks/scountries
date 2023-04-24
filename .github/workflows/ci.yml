@@ -3,7 +3,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: ['main']
+    branches: [ 'main' ]
 
 jobs:
   lint:
@@ -31,8 +31,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java: ["8", "11", "17"]
-        scala: ["2.12.17", "2.13.10", "3.2.2"]
+        java: [ "8", "11", "17" ]
+        scala: [ "2.12.17", "2.13.10", "3.2.2" ]
     steps:
       - name: Checkout current branch
         uses: actions/checkout@v3.0.2
@@ -68,7 +68,7 @@ jobs:
 
   ci:
     runs-on: ubuntu-latest
-    needs: [lint, test, publish-local]
+    needs: [ lint, test, publish-local ]
     steps:
       - name: Aggregate outcomes
         run: echo "build succeeded"
