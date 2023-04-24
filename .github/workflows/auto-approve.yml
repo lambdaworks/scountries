@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-    if: github.actor == 'drmarjanovic' || github.actor == 'scala-steward' || github.actor == 'renovate[bot]'
+    if: github.actor == 'scala-steward' || github.actor == 'renovate[bot]'
     steps:
       - uses: hmarr/auto-approve-action@v3
