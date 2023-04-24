@@ -72,3 +72,13 @@ jobs:
     steps:
       - name: Aggregate outcomes
         run: echo "build succeeded"
+
+  auto-approve:
+    runs-on: ubuntu-20.04
+    needs: [ ci ]
+    permissions:
+      pull-requests: write
+    if: github.event_name == 'pull_request_target' && github.actor == 'drmarjanovic'
+    steps:
+      - name: Auto approve
+        uses: hmarr/auto-approve-action@v3.2.1
