@@ -1,0 +1,13 @@
+{
+  "commitMessageAction": "Update",
+  "commitMessageTopic": " {{depName}}",
+  "packageRules": [
+    {
+      "matchManagers": [
+        "sbt"
+      ],
+      "enabled": false
+    }
+  ],
+  "rebaseWhen": "conflicted"
+}
