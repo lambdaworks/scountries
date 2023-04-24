@@ -6,6 +6,8 @@
 
 # scountries
 
+Testing auto-approve PR.
+
 Scala library that provides an enumeration of [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166) codes for countries, along with their subdivisions.
 
 To use this library, add the following to your `build.sbt` file:
