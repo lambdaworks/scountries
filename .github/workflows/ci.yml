@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout current branch
-        uses: actions/checkout@v3.5.2
+        uses: actions/checkout@v3.5.3
         with:
           fetch-depth: 0
       - name: Set up Java
@@ -35,7 +35,7 @@ jobs:
         scala: [ "2.12.18", "2.13.10", "3.2.2" ]
     steps:
       - name: Checkout current branch
-        uses: actions/checkout@v3.5.2
+        uses: actions/checkout@v3.5.3
         with:
           fetch-depth: 0
       - name: Set up Java
@@ -54,7 +54,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout current branch
-        uses: actions/checkout@v3.5.2
+        uses: actions/checkout@v3.5.3
       - name: Setup Java
         uses: actions/setup-java@v3.11.0
         with:
