@@ -3,7 +3,7 @@ import Dependencies._
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
 val Scala212: String = "2.12.17"
-val Scala213: String = "2.13.11"
+val Scala213: String = "2.13.10"
 val Scala3: String   = "3.2.2"
 
 inThisBuild(
