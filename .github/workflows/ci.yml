@@ -32,7 +32,7 @@ jobs:
       fail-fast: false
       matrix:
         java: [ "8", "11", "17", "21" ]
-        scala: [ "2.12.20", "2.13.14", "3.5.0" ]
+        scala: [ "2.12.20", "2.13.15", "3.5.0" ]
     steps:
       - name: Checkout current branch
         uses: actions/checkout@v4.2.0
