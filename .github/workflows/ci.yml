@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - name: Checkout current branch
@@ -23,10 +23,10 @@ jobs:
       - name: Cache Scala dependencies
         uses: coursier/cache-action@v6
       - name: Check code formatting
-        run: sbt check
+        run: ./sbt check
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     strategy:
       fail-fast: false
@@ -47,7 +47,7 @@ jobs:
       - name: Cache Scala dependencies
         uses: coursier/cache-action@v6
       - name: Run tests
-        run: sbt ++${{ matrix.scala }} test
+        run: ./sbt ++${{ matrix.scala }} test
 
   publish-local:
     runs-on: ubuntu-22.04
@@ -64,10 +64,10 @@ jobs:
       - name: Cache scala dependencies
         uses: coursier/cache-action@v6
       - name: Check that building packages works
-        run: sbt +publishLocal
+        run: ./sbt +publishLocal
 
   ci:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [ lint, test, publish-local ]
     steps:
       - name: Aggregate outcomes
