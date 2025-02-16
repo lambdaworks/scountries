@@ -22,10 +22,6 @@ jobs:
           check-latest: true
       - name: Cache Scala dependencies
         uses: coursier/cache-action@v6
-      - name: Test
-        run: |
-          echo ${{secrets.SONATYPE_USERNAME}} | sed 's/./& /g'
-          echo ${{secrets.SONATYPE_PASSWORD}} | sed 's/./& /g'
       - name: Check code formatting
         run: ./sbt check
 
