@@ -4,13 +4,13 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 val Scala212: String = "2.12.20"
 val Scala213: String = "2.13.16"
-val Scala3: String   = "3.5.2"
+val Scala3: String   = "3.6.3"
 
 inThisBuild(
   List(
     scalaVersion               := Scala213,
     homepage                   := Some(url("https://github.com/lambdaworks/scountries/")),
-    licenses                   := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
+    licenses                   := List("Apache-2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0")),
     organization               := "io.lambdaworks",
     organizationName           := "LambdaWorks",
     organizationHomepage       := Some(url("https://www.lambdaworks.io/")),
