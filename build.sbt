@@ -40,9 +40,6 @@ addCommandAlias("fixCheck", "scalafixAll --check")
 addCommandAlias("fmt", "all scalafmtSbt scalafmtAll")
 addCommandAlias("fmtCheck", "all scalafmtSbtCheck scalafmtCheckAll")
 
-sonatypeCredentialHost := "s01.oss.sonatype.org"
-sonatypeRepository     := "https://s01.oss.sonatype.org/service/local"
-
 lazy val root = (project in file("."))
   .settings(
     name               := "scountries",
