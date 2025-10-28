@@ -20,7 +20,7 @@ jobs:
           java-version: 17
           check-latest: true
       - name: Cache Scala dependencies
-        uses: coursier/cache-action@v6
+        uses: coursier/cache-action@v7
       - name: Release artifacts
         run: ./sbt ci-release
         env:
