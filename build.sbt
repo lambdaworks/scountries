@@ -18,7 +18,6 @@ inThisBuild(
     startYear                  := Some(2022),
     semanticdbEnabled          := scalaVersion.value != Scala3, // enable SemanticDB
     semanticdbVersion          := scalafixSemanticdb.revision,
-    scalafixScalaBinaryVersion := CrossVersion.binaryScalaVersion(scalaVersion.value),
     scalafixDependencies ++= List(
       organizeImports
     ),
@@ -49,6 +48,12 @@ lazy val root = (project in file("."))
       scalaTest
     ),
     scalacOptions ++= List(
-      "-Ywarn-unused"
+      "-Xfatal-warnings",
+      "-Ywarn-unused",
+      "-Ywarn-dead-code",
+      "-Ywarn-value-discard",
+      "-deprecation",
+      "-feature",
+      "-unchecked"
     )
   )
