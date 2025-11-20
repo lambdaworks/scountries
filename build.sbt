@@ -8,16 +8,16 @@ val Scala3: String   = "3.7.4"
 
 inThisBuild(
   List(
-    scalaVersion               := Scala213,
-    homepage                   := Some(url("https://github.com/lambdaworks/scountries/")),
-    licenses                   := List("Apache-2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0")),
-    organization               := "io.lambdaworks",
-    organizationName           := "LambdaWorks",
-    organizationHomepage       := Some(url("https://www.lambdaworks.io/")),
-    description                := "Scala library that provides an enumeration of ISO 3166 codes for countries, along with their subdivisions.",
-    startYear                  := Some(2022),
-    semanticdbEnabled          := scalaVersion.value != Scala3, // enable SemanticDB
-    semanticdbVersion          := scalafixSemanticdb.revision,
+    scalaVersion         := Scala213,
+    homepage             := Some(url("https://github.com/lambdaworks/scountries/")),
+    licenses             := List("Apache-2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0")),
+    organization         := "io.lambdaworks",
+    organizationName     := "LambdaWorks",
+    organizationHomepage := Some(url("https://www.lambdaworks.io/")),
+    description          := "Scala library that provides an enumeration of ISO 3166 codes for countries, along with their subdivisions.",
+    startYear            := Some(2022),
+    semanticdbEnabled    := scalaVersion.value != Scala3, // enable SemanticDB
+    semanticdbVersion    := scalafixSemanticdb.revision,
     scalafixDependencies ++= List(
       organizeImports
     ),
@@ -47,13 +47,26 @@ lazy val root = (project in file("."))
       enumeratum,
       scalaTest
     ),
-    scalacOptions ++= List(
-      "-Xfatal-warnings",
-      "-Ywarn-unused",
-      "-Ywarn-dead-code",
-      "-Ywarn-value-discard",
-      "-deprecation",
-      "-feature",
-      "-unchecked"
-    )
+    scalacOptions ++= {
+      if (scalaVersion.value.startsWith("3")) {
+        Seq(
+          "-Werror",
+          "-Wunused:all",
+          "-Wvalue-discard",
+          "-deprecation",
+          "-feature",
+          "-unchecked"
+        )
+      } else {
+        Seq(
+          "-Xfatal-warnings",
+          "-Ywarn-unused",
+          "-Ywarn-dead-code",
+          "-Ywarn-value-discard",
+          "-deprecation",
+          "-feature",
+          "-unchecked"
+        )
+      }
+    }
   )
