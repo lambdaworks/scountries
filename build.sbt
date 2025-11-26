@@ -58,7 +58,7 @@ lazy val root = (project in file("."))
           "-unchecked"
         )
       } else {
-        Seq(
+        List(
           "-Xfatal-warnings",
           "-Ywarn-unused",
           "-Ywarn-dead-code",
