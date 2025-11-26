@@ -49,7 +49,7 @@ lazy val root = (project in file("."))
     ),
     scalacOptions ++= {
       if (scalaVersion.value.startsWith("3")) {
-        Seq(
+        List(
           "-Werror",
           "-Wunused:all",
           "-Wvalue-discard",
