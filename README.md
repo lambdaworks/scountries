@@ -20,7 +20,7 @@ Where `x.y.z` refers to the release version in the badge above.
 [ci-badge]: https://github.com/lambdaworks/scountries/actions/workflows/ci.yml/badge.svg
 [ci-link]: https://github.com/lambdaworks/scountriesr/actions/workflows/ci.yml
 [license-badge]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
-[sonatype-releases-badge]: https://img.shields.io/nexus/r/https/s01.oss.sonatype.org/io.lambdaworks/scountries_2.13?color=blue "Sonatype Releases"
-[sonatype-releases-link]: https://s01.oss.sonatype.org/content/repositories/releases/io/lambdaworks/scountries_2.13/ "Sonatype Releases"
-[sonatype-snapshots-badge]: https://img.shields.io/nexus/s/https/s01.oss.sonatype.org/io.lambdaworks/scountries_2.13 "Sonatype Snapshots"
-[sonatype-snapshots-link]: https://s01.oss.sonatype.org/content/repositories/snapshots/io/lambdaworks/scountries_2.13/ "Sonatype Snapshots"
+[sonatype-releases-badge]: https://img.shields.io/maven-central/v/io.lambdaworks/scountries_2.13.svg?label=Release "Maven Central"
+[sonatype-releases-link]: https://central.sonatype.com/artifact/io.lambdaworks/scountries_2.13 "Maven Central"
+[sonatype-snapshots-badge]: https://img.shields.io/maven-metadata/v?label=Snapshot&metadataUrl=https%3A%2F%2Fcentral.sonatype.com%2Frepository%2Fmaven-snapshots%2Fio%2Flambdaworks%2Fscountries_2.13%2Fmaven-metadata.xml "Sonatype Snapshots"
+[sonatype-snapshots-link]: https://central.sonatype.com/repository/maven-snapshots/io/lambdaworks/scountries_2.13/ "Sonatype Snapshots"
