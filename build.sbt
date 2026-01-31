@@ -4,7 +4,7 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 val Scala212: String = "2.12.21"
 val Scala213: String = "2.13.18"
-val Scala3: String   = "3.7.4"
+val Scala3: String   = "3.8.1"
 
 inThisBuild(
   List(
