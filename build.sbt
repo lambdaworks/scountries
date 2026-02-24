@@ -57,7 +57,9 @@ lazy val scountries = crossProject(JVMPlatform, JSPlatform, NativePlatform)
     crossScalaVersions := List(Scala212, Scala213, Scala3),
     libraryDependencies ++= List(
       enumeratum.value,
-      scalaTest.value
+      scalaCheck.value,
+      scalaTest.value,
+      scalaTestPlusCheck.value
     ),
     scalacOptions ++= {
       if (scalaVersion.value.startsWith("3")) {
