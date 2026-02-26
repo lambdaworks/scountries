@@ -13,7 +13,7 @@ inThisBuild(
     licenses             := List("Apache-2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0")),
     organization         := "io.lambdaworks",
     organizationName     := "LambdaWorks",
-    organizationHomepage := Some(url("https://www.lambdaworks.io/")),
+    organizationHomepage := Some(url("https://lambdaworks.io/")),
     description          := "Scala library that provides an enumeration of ISO 3166 codes for countries, along with their subdivisions.",
     startYear            := Some(2022),
     semanticdbEnabled    := scalaVersion.value != Scala3, // enable SemanticDB
@@ -45,7 +45,9 @@ lazy val root = (project in file("."))
     crossScalaVersions := List(Scala212, Scala213, Scala3),
     libraryDependencies ++= List(
       enumeratum,
-      scalaTest
+      scalaTest,
+      scalaCheck,
+      scalaTestPlus
     ),
     scalacOptions ++= {
       if (scalaVersion.value.startsWith("3")) {
