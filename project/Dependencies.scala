@@ -9,9 +9,9 @@ object Dependencies {
     val ScalaTest       = "3.2.19"
   }
 
-  val enumeratum: ModuleID      = "com.beachape"         %% "enumeratum"              % Versions.Enumeratum
-  val organizeImports: ModuleID = "com.github.liancheng" %% "organize-imports"        % Versions.OrganizeImports
-  val scalaCheck: ModuleID      = "org.scalatestplus"    %% "scalacheck-1-18"         % Versions.ScalaCheck % Test
-  val scalaTest: ModuleID       = "org.scalatest"        %% "scalatest"               % Versions.ScalaTest % Test
+  val enumeratum: ModuleID      = "com.beachape"         %% "enumeratum"       % Versions.Enumeratum
+  val organizeImports: ModuleID = "com.github.liancheng" %% "organize-imports" % Versions.OrganizeImports
+  val scalaCheck: ModuleID      = "org.scalatestplus"    %% "scalacheck-1-18"  % Versions.ScalaCheck % Test
+  val scalaTest: ModuleID       = "org.scalatest"        %% "scalatest"        % Versions.ScalaTest  % Test
 
 }
