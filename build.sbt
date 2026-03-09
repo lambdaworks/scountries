@@ -45,7 +45,9 @@ lazy val root = (project in file("."))
     crossScalaVersions := List(Scala212, Scala213, Scala3),
     libraryDependencies ++= List(
       enumeratum,
-      scalaTest
+      scalaCheck,
+      scalaTest,
+      scalaTestPlusScalacheck
     ),
     scalacOptions ++= {
       if (scalaVersion.value.startsWith("3")) {
