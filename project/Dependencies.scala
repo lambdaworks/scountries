@@ -5,7 +5,7 @@ object Dependencies {
   private object Versions {
     val Enumeratum      = "1.9.6"
     val OrganizeImports = "0.6.0"
-    val ScalaTest       = "3.2.19"
+    val ScalaTest       = "3.2.20"
   }
 
   val enumeratum: ModuleID      = "com.beachape"         %% "enumeratum"       % Versions.Enumeratum
