@@ -10,4 +10,4 @@ jobs:
       pull-requests: write
     if: github.actor == 'scala-steward' || github.actor == 'renovate[bot]'
     steps:
-      - uses: hmarr/auto-approve-action@v3
+      - uses: hmarr/auto-approve-action@v4
