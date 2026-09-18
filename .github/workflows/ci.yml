@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     steps:
       - name: Checkout current branch
@@ -26,7 +26,7 @@ jobs:
         run: ./sbt check
 
   test:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     strategy:
       fail-fast: false
@@ -50,7 +50,7 @@ jobs:
         run: ./sbt ++${{ matrix.scala }} test
 
   publish-local:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     steps:
       - name: Checkout current branch
@@ -67,7 +67,7 @@ jobs:
         run: ./sbt +publishLocal
 
   ci:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs: [ lint, test, publish-local ]
     steps:
       - name: Aggregate outcomes
