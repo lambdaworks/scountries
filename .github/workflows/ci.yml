@@ -21,7 +21,7 @@ jobs:
           java-version: 27.0.1+0
           check-latest: true
       - name: Cache Scala dependencies
-        uses: coursier/cache-action@v8
+        uses: coursier/cache-action@v9
       - name: Check code formatting
         run: ./sbt check
 
@@ -45,7 +45,7 @@ jobs:
           java-version: 27.0.1+0
           check-latest: true
       - name: Cache Scala dependencies
-        uses: coursier/cache-action@v8
+        uses: coursier/cache-action@v9
       - name: Run tests
         run: ./sbt ++${{ matrix.scala }} test
 
@@ -62,7 +62,7 @@ jobs:
           java-version: 27.0.1+0
           check-latest: true
       - name: Cache scala dependencies
-        uses: coursier/cache-action@v8
+        uses: coursier/cache-action@v9
       - name: Check that building packages works
         run: ./sbt +publishLocal
 
