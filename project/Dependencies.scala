@@ -1,3 +1,4 @@
+import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 import sbt._
 
 object Dependencies {
@@ -8,8 +9,9 @@ object Dependencies {
     val ScalaTest       = "3.2.20"
   }
 
-  val enumeratum: ModuleID      = "com.beachape"         %% "enumeratum"       % Versions.Enumeratum
+  val enumeratum: Def.Initialize[ModuleID] = Def.setting("com.beachape" %%% "enumeratum" % Versions.Enumeratum)
+  val scalaTest: Def.Initialize[ModuleID]  = Def.setting("org.scalatest" %%% "scalatest" % Versions.ScalaTest % Test)
+
   val organizeImports: ModuleID = "com.github.liancheng" %% "organize-imports" % Versions.OrganizeImports
-  val scalaTest: ModuleID       = "org.scalatest"        %% "scalatest"        % Versions.ScalaTest % Test
 
 }
