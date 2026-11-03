@@ -49,7 +49,7 @@ jobs:
       - name: Install Scala Native toolchain
         run: sudo apt-get update && sudo apt-get install -y clang libstdc++-14-dev libgc-dev
       - name: Run tests
-        run: ./sbt ++${{ matrix.scala }} test
+        run: ./sbt ++${{ matrix.scala }} testFull
 
   publish-local:
     runs-on: ubuntu-26.04

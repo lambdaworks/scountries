@@ -84,3 +84,10 @@ lazy val scountries = crossProject(JVMPlatform, JSPlatform, NativePlatform)
       }
     }
   )
+  .nativeSettings(
+    // ScalaTest and ScalaCheck are built against older Scala Native 0.5.x test-interface releases. These are
+    // binary compatible within 0.5.x, but the module declares a strict version scheme, which sbt 2 enforces.
+    // The full artifact name is needed because eviction checks do not apply the platform suffix to `%%` here.
+    libraryDependencySchemes +=
+      "org.scala-native" % s"test-interface_${platform.value}_${scalaBinaryVersion.value}" % VersionScheme.EarlySemVer
+  )
