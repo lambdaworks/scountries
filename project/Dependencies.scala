@@ -1,4 +1,3 @@
-import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 import sbt._
 
 object Dependencies {
@@ -11,13 +10,12 @@ object Dependencies {
     val ScalaTestPlusCheck = "3.2.20.0"
   }
 
-  val enumeratum: Def.Initialize[ModuleID] = Def.setting("com.beachape" %%% "enumeratum" % Versions.Enumeratum)
-  val scalaCheck: Def.Initialize[ModuleID] =
-    Def.setting("org.scalacheck" %%% "scalacheck" % Versions.ScalaCheck % Test)
-  val scalaTest: Def.Initialize[ModuleID]          = Def.setting("org.scalatest" %%% "scalatest" % Versions.ScalaTest % Test)
-  val scalaTestPlusCheck: Def.Initialize[ModuleID] =
-    Def.setting("org.scalatestplus" %%% "scalacheck-1-19" % Versions.ScalaTestPlusCheck % Test)
-
-  val organizeImports: ModuleID = "com.github.liancheng" %% "organize-imports" % Versions.OrganizeImports
+  // sbt 2's `%%` is platform-aware: it resolves the JVM, Scala.js or Scala Native artifact
+  // based on the project's `platform` setting, so `%%%` is no longer needed.
+  val enumeratum: ModuleID         = "com.beachape"         %% "enumeratum"       % Versions.Enumeratum
+  val organizeImports: ModuleID    = "com.github.liancheng" %% "organize-imports" % Versions.OrganizeImports
+  val scalaCheck: ModuleID         = "org.scalacheck"       %% "scalacheck"       % Versions.ScalaCheck         % Test
+  val scalaTest: ModuleID          = "org.scalatest"        %% "scalatest"        % Versions.ScalaTest          % Test
+  val scalaTestPlusCheck: ModuleID = "org.scalatestplus"    %% "scalacheck-1-19"  % Versions.ScalaTestPlusCheck % Test
 
 }
