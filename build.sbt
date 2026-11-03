@@ -40,12 +40,24 @@ addCommandAlias("fmt", "all scalafmtSbt scalafmtAll")
 addCommandAlias("fmtCheck", "all scalafmtSbtCheck scalafmtCheckAll")
 
 lazy val root = (project in file("."))
+  .aggregate(scountries.jvm, scountries.js, scountries.native)
+  .settings(
+    name                                 := "scountries",
+    publish / skip                       := true,
+    crossScalaVersions                   := Nil,
+    Compile / unmanagedSourceDirectories := Nil,
+    Test / unmanagedSourceDirectories    := Nil
+  )
+
+lazy val scountries = crossProject(JVMPlatform, JSPlatform, NativePlatform)
+  .crossType(CrossType.Pure)
+  .in(file("."))
   .settings(
     name               := "scountries",
     crossScalaVersions := List(Scala212, Scala213, Scala3),
     libraryDependencies ++= List(
-      enumeratum,
-      scalaTest
+      enumeratum.value,
+      scalaTest.value
     ),
     scalacOptions ++= {
       if (scalaVersion.value.startsWith("3")) {
