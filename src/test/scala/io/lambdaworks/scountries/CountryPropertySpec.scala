@@ -4,9 +4,9 @@ import org.scalacheck.Gen
 import org.scalatest.Inspectors.forEvery
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec._
-import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
+import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
-final class CountryPropertySpec extends AnyWordSpec with Matchers with ScalaCheckPropertyChecks {
+final class CountryPropertySpec extends AnyWordSpec with Matchers with ScalaCheckDrivenPropertyChecks {
 
   implicit override val generatorDrivenConfig: PropertyCheckConfiguration =
     PropertyCheckConfiguration(minSuccessful = 500)

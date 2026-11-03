@@ -14,7 +14,7 @@ object Dependencies {
   val enumeratum: Def.Initialize[ModuleID] = Def.setting("com.beachape" %%% "enumeratum" % Versions.Enumeratum)
   val scalaCheck: Def.Initialize[ModuleID] =
     Def.setting("org.scalacheck" %%% "scalacheck" % Versions.ScalaCheck % Test)
-  val scalaTest: Def.Initialize[ModuleID] = Def.setting("org.scalatest" %%% "scalatest" % Versions.ScalaTest % Test)
+  val scalaTest: Def.Initialize[ModuleID]          = Def.setting("org.scalatest" %%% "scalatest" % Versions.ScalaTest % Test)
   val scalaTestPlusCheck: Def.Initialize[ModuleID] =
     Def.setting("org.scalatestplus" %%% "scalacheck-1-19" % Versions.ScalaTestPlusCheck % Test)
 
