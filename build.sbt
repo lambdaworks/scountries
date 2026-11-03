@@ -9,11 +9,11 @@ val Scala3: String   = "3.10.0"
 inThisBuild(
   List(
     scalaVersion         := Scala213,
-    homepage             := Some(url("https://github.com/lambdaworks/scountries/")),
-    licenses             := List("Apache-2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0")),
+    homepage             := Some(uri("https://github.com/lambdaworks/scountries/")),
+    licenses             := List("Apache-2.0" -> uri("https://www.apache.org/licenses/LICENSE-2.0")),
     organization         := "io.lambdaworks",
     organizationName     := "LambdaWorks",
-    organizationHomepage := Some(url("https://www.lambdaworks.io/")),
+    organizationHomepage := Some(uri("https://www.lambdaworks.io/")),
     description          := "Scala library that provides an enumeration of ISO 3166 codes for countries, along with their subdivisions.",
     startYear            := Some(2022),
     semanticdbEnabled    := scalaVersion.value != Scala3, // enable SemanticDB
@@ -26,7 +26,7 @@ inThisBuild(
         "lambdaworks",
         "LambdaWorks' Team",
         "admin@lambdaworks.io",
-        url("https://github.com/lambdaworks")
+        uri("https://github.com/lambdaworks")
       )
     )
   )
@@ -42,7 +42,7 @@ addCommandAlias("fmtCheck", "all scalafmtSbtCheck scalafmtCheckAll")
 lazy val root = (project in file("."))
   .aggregate(scountries.jvm, scountries.js, scountries.native)
   .settings(
-    name                                 := "scountries",
+    name                                 := "scountries-root",
     publish / skip                       := true,
     crossScalaVersions                   := Nil,
     Compile / unmanagedSourceDirectories := Nil,
@@ -56,10 +56,10 @@ lazy val scountries = crossProject(JVMPlatform, JSPlatform, NativePlatform)
     name               := "scountries",
     crossScalaVersions := List(Scala212, Scala213, Scala3),
     libraryDependencies ++= List(
-      enumeratum.value,
-      scalaCheck.value,
-      scalaTest.value,
-      scalaTestPlusCheck.value
+      enumeratum,
+      scalaCheck,
+      scalaTest,
+      scalaTestPlusCheck
     ),
     scalacOptions ++= {
       if (scalaVersion.value.startsWith("3")) {
